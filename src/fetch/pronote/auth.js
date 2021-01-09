@@ -35,7 +35,7 @@ async function getAuthKey(session, challenge, key, username)
     });
     console.log('AUTH MESSAGE '+test, username);
 
-    return auth.cle;
+    return null;
 }
 
 module.exports = {
