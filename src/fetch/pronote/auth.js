@@ -33,7 +33,7 @@ async function getAuthKey(session, challenge, key, username)
             espace: session.type.id
         }
     });
-    console.log('AUTH MESSAGE '+test, username);
+    console.log('AUTH MESSAGE '+JSON.stringify(test), username);
 
     return null;
 }
