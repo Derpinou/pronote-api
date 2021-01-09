@@ -79,7 +79,7 @@ async function auth(session, username, password, fromCas)
         throw errors.WRONG_CREDENTIALS.drop();
     }
 
-    const userKey = await getAuthKey(session, challenge, key);
+    const userKey = await getAuthKey(session, challenge, key, username);
     if (!userKey) {
         throw errors.WRONG_CREDENTIALS.drop();
     }

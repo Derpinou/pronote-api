@@ -24,7 +24,7 @@ async function getId(session, username, fromCas)
     };
 }
 
-async function getAuthKey(session, challenge, key)
+async function getAuthKey(session, challenge, key, username)
 {
     const { donnees: auth } = await request(session, 'Authentification', {
         donnees: {
@@ -33,7 +33,7 @@ async function getAuthKey(session, challenge, key)
             espace: session.type.id
         }
     });
-    console.log(auth);
+    console.log('AUTH MESSAGE '+auth.message);
 
     return auth.cle;
 }
