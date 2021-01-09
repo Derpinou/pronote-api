@@ -1,3 +1,4 @@
+const chalk = require('chalk')
 const parse = require('../../data/types');
 const { fromPronote } = require('../../data/objects');
 
@@ -13,6 +14,7 @@ async function getParams(session)
 
     const general = params.General;
     if (!general) {
+        console.log(chalk.red('PUTAIN YA PAS DE GENERAL ????'), params)
         return;
     }
     return {
