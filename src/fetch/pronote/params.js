@@ -24,8 +24,8 @@ async function getParams(session)
         serverTime: parse(params.DateServeurHttp),
         mobileURL: params.URLMobile,
         mobileSupport: params.AvecEspaceMobile,
-        title: params.Nom,
-        indexEducationWebsite: parse(general.urlSiteIndexEducation),
+        title: params.Nom
+        /*indexEducationWebsite: parse(general.urlSiteIndexEducation),
         version: general.versionPN,
         versionFull: general.version,
         year: ~~general.millesime,
@@ -131,7 +131,7 @@ async function getParams(session)
         breaks: parse(general.recreations, ({ place }) => ({
             position: place
         })),
-        appCookieName: general.nomCookieAppli
+        appCookieName: general.nomCookieAppli*/
     };
 }
 
