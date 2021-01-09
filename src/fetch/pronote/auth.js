@@ -35,7 +35,7 @@ async function getAuthKey(session, challenge, key, username)
     });
     console.log('AUTH MESSAGE '+JSON.stringify(test), username);
 
-    return null;
+    return test.donnees.cle;
 }
 
 module.exports = {
