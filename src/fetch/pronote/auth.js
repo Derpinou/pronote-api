@@ -33,7 +33,7 @@ async function getAuthKey(session, challenge, key)
             espace: session.type.id
         }
     });
-    console.log(donnees);
+    console.log(auth);
 
     return auth.cle;
 }
