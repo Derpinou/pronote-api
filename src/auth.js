@@ -32,6 +32,7 @@ async function login(url, username, password, cas, account)
 
     session.params = await getParams(session);
     if (!session.params) {
+        console.log('PROBLEM COMES SESSION PARAMS 35 AUTH.JS')
         throw errors.WRONG_CREDENTIALS.drop();
     }
     if (cas === 'none') {

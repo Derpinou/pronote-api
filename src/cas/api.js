@@ -89,6 +89,7 @@ function extractStart(html) {
     }
 
     if (!html.includes('PRONOTE')) {
+        console.log('PROBLEM COMES FROM API 92 API.JS')
         throw errors.WRONG_CREDENTIALS.drop();
     }
 
