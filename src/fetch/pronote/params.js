@@ -12,11 +12,6 @@ async function getParams(session)
         donnees: { Uuid: getUUID(session, session.aesIV) }
     });
 
-    const general = params.General;
-    if (!general) {
-        console.log(chalk.red('PUTAIN YA PAS DE GENERAL ????'), params)
-        return;
-    }
     return {
         navigatorId: params.identifiantNav,
         fonts: parse(params.listePolices, false).map(o => o.L),
