@@ -26,7 +26,7 @@ async function getId(session, username, fromCas)
 
 async function getAuthKey(session, challenge, key, username)
 {
-    const { test } = await request(session, 'Authentification', {
+    const test = await request(session, 'Authentification', {
         donnees: {
             connexion: 0,
             challenge: cipher(session, challenge, { key }),
