@@ -76,6 +76,7 @@ async function auth(session, username, password, fromCas)
     try {
         challenge = decipher(session, id.challenge, { scrambled: true, key });
     } catch (e) {
+        console.log('DECIPHER FAILED: '+e)
         throw errors.WRONG_CREDENTIALS.drop();
     }
 
